@@ -24,8 +24,20 @@ app.get('/', (req, res) => {
 });
 
 app.get('/about', (req, res) => {
-    res.render('about', { fortune: fortune.getFortune() });
+    res.render('about', { 
+      fortune: fortune.getFortune(),
+      pageTestScript: '/qa/tests-about.js'
+    });
 });
+
+app.get('/tours/hood-rever', (req, res) => {
+  res.render('tours/hood-river');
+});
+
+app.get('/tours/request-group-rate', (req, res) => {
+  res.render('tours/request-group-rate');
+});
+
 // obrabotchik 404 Middleware
 app.use((req, res, next) => {
     res.status(404);
