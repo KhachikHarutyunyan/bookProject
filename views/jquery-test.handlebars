@@ -1,0 +1,15 @@
+{{#section 'head'}}
+<!-- delaem tak chtob@ google ignoriroval etu stranicu -->
+    <meta name="robots" content="noindex">
+{{/section}}
+<h1>Testovaya stranica</h1>
+
+<p>Testiruem chto to svyazannoe s JQuery</p>
+{{#section 'jquery'}}
+    <script>
+        $('document').ready(function() {
+            $('h1').html('JQuery rabotaet');
+        });
+    </script>
+{{/section}}
+
